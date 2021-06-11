@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import './style.css';
 
 const Sidebar = (props) => {
-  console.log(props);
   const SignOut = () => props.history.push('/login');
 
   return (

@@ -1,5 +1,4 @@
-import React, { Component, Suspense, useEffect } from 'react';
-import * as router from 'react-router-dom';
+import React, { Suspense, useEffect } from 'react';
 import Sidebar from './sidebar';
 import { admin } from '../../navigations/admin';
 import routes from '../../routes';
@@ -9,12 +8,10 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 
 const DefaultLayout = ({ history }) => {
-  useEffect(() => {
-  }, []);
+  useEffect(() => {}, []);
   const Loading = () => {
     return <div className='animated fadeIn pt-1 text-center'>Loading...</div>;
   };
-
   return (
     <div>
       <div className='sidebar'>
