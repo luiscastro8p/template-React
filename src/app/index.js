@@ -2,16 +2,16 @@
 import './app.css';
 import React from "react";
 
-import Login from '../containers/Login'
+import Login from '../containers/pages/Login'
+import Signup from '../containers/pages/Signup';
+import Activate from '../containers/pages/Activate';
+import ResetPassword from '../containers/pages/ResetPassword';
+import ResetPasswordConfirm from '../containers/pages/ResetPasswordConfirm';
 import {Provider} from 'react-redux'
 import store from '../store'
 import { BrowserRouter as Router, Route, Switch,Link } from "react-router-dom";
 import Layout from '../hocs/Layout';
 
-import Signup from '../containers/Signup';
-import Activate from '../containers/Activate';
-import ResetPassword from '../containers/ResetPassword';
-import ResetPasswordConfirm from '../containers/ResetPasswordConfirm';
  import PrivateRoute from "./PrivateRoute";
 
 const DefaultLayout = React.lazy(() =>

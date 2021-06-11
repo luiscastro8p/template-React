@@ -10,7 +10,6 @@ const DefaultFooter = React.lazy(() => import('./DefaultFooter'));
 
 const DefaultLayout = ({ history }) => {
   useEffect(() => {
-    console.log('hola sidebar');
   }, []);
   const Loading = () => {
     return <div className='animated fadeIn pt-1 text-center'>Loading...</div>;
