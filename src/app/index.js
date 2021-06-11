@@ -33,8 +33,6 @@ const  App = () => {
     <Provider store={store}>
       <Router>
         <Layout>
-          <Link to='/login'>Login</Link>
-          <Link to='/signup'>Registrarse</Link>
           <Switch>
             <React.Suspense fallback={loading()}>
               <Route exact path='/login' component={Login}></Route>

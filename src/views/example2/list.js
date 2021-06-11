@@ -4,7 +4,7 @@ import { actions } from './actions';
 import { initialState } from './constants';
 import { reducer } from './reducer';
 
-const Example = () => {
+const Example2 = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {}, [state.reload]);
@@ -17,11 +17,11 @@ const Example = () => {
     <>
       <div className=''>
         <p className='btn' onClick={() => example} >
-          Entro al componente
+          Entro al 2
         </p>
       </div>
     </>
   );
 };
 
-export default Example;
+export default Example2;

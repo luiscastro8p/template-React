@@ -1,13 +1,37 @@
 import React, { useEffect } from 'react';
 import './style.css';
 
-const Sidebar = ({ history, items }) => {
-  console.log(items);
+const Sidebar = (props) => {
+  console.log(props);
+  const SignOut = () => props.history.push('/login');
+
   return (
     <>
-      {items.map((item,idx) => {
-        return <p key={idx}>{item ? item.name : ''}</p>;
-      })}
+      <div className='sidebar-container'>
+        <div className='sidebar-logo'>
+          {/* Logo empresa */}
+          Logo
+        </div>
+        <ul className='sidebar-navigation'>
+          {props.items.map((item, idx) => {
+            return (
+              <li key={idx} onClick={() => props.history.push(item.url)}>
+                <a>
+                  <div>
+                    {item.icon && <em className={item.icon}></em>}
+                    {item.name && <p> {item ? item.name : ''}</p>}
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+        <i
+          className='fa fa-sign-out pos-sign-out'
+          aria-hidden='true'
+          onClick={SignOut}
+        ></i>
+      </div>
     </>
   );
 };

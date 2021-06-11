@@ -4,20 +4,12 @@
   color: #20a8d8 !important;
 }
 
-
-
-html body {
-  font-family: 'poppins' !important;
-}
-
 .view .preloader {
   height: 100vh !important;
   overflow: hidden;
   z-index: 9999;
-  background-color: #23b7e5;
+  background-color: white;
   transition: opacity .65s;
-
-
 }
 
 .view p {

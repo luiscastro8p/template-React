@@ -1,9 +1,5 @@
 export const admin = [
   {
-    title: true,
-    name: '',
-  },
-  {
     name: 'Inicio',
     url: '/admin/home',
     icon: 'icon-speedometer',
