@@ -17,24 +17,27 @@ import Layout from '../hocs/Layout';
 const DefaultLayout = React.lazy(() =>
   import("../containers/DefaultLayout/index")
 );
-const loading = () => (
-  <div className='view'>
-    <div className='preloader d-flex justify-content-center align-items-center'>
-      <div className='text-center'>
-        <p>
-          doCapital <small>®</small>{' '}
-        </p>
+const Loading = () => {
+  return (
+    <div className='view'>
+      <div className='preloader d-flex justify-content-center align-items-center'>
+        <div className='text-center'>
+          <p>
+            doCapital <small>®</small>{' '}
+          </p>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 const  App = () => {
   return (
     <Provider store={store}>
       <Router>
         <Layout>
           <Switch>
-            <React.Suspense fallback={loading()}>
+            <React.Suspense fallback={<Loading/>}>
+              <Route exact path='/' component={Login}></Route>
               <Route exact path='/login' component={Login}></Route>
               <Route exact path='/signup' component={Signup}></Route>
               <Route

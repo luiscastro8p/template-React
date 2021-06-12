@@ -8,7 +8,7 @@
   height: 100vh !important;
   overflow: hidden;
   z-index: 9999;
-  background-color: white;
+  background-color: black;
   transition: opacity .65s;
 }
 
